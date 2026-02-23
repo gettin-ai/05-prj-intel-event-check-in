@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -48,7 +49,6 @@ body {
 .intel-logo {
   max-width: 100px;
   margin-bottom: 25px;
-  filter: brightness(0) invert(1);
 }
 
 .hero h1 {
@@ -348,6 +348,29 @@ select {
   color: #475569;
 }
 
+.team-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.attendee-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.attendee-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.attendee-list li:last-child {
+  border-bottom: none;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -380,5 +403,22 @@ select {
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for winning team logo */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+  25% {
+    transform: scale(1.2) translateY(-20px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1.1) translateY(-10px);
   }
 }
